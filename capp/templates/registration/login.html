@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'capp/signUp.css' %}">
+  <link rel="stylesheet" href="{% static 'capp/variables.css' %}">
+  <link rel="stylesheet" href="{% static 'capp/components.css' %}">
+  <title>Вход</title>
+</head>
+<body>
+  <form method="post" class="loginForm container">
+    {% csrf_token %}
+    <h2>Вход</h2>
+    {{form.as_p}}
+    <section id="loginSection">
+    <a href="/account"><button class="Button" type="button">Войти</button></a>
+    <a href="/signUp"><button class="Button" type="button">Регистрация</button></a>
+    </section>
+    
+    {% if form.errors %}
+    <ul>
+      <li>Пожалуйста, заполните форму правильно</li>
+    </ul>
+  {% endif %}
+  </form>
+
+  <script>
+  	var token = '{{ csrf_token }}';
+    window.onload = () => {
+      document.getElementById("id_referral").value = "{{ referral|safe }}";
+    }
+    document.getElementById("id_username").placeholder = "E-mail";
+    document.getElementById("id_password").placeholder = "Пароль";
+    document.getElementsByClassName("loginForm")[0].classList.remove("container");
+  </script>
+  <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+</body>
+</html>

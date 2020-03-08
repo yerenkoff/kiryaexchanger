@@ -1,0 +1,247 @@
+@import "variables.sass"
+
+.chart-container
+	height: 300px
+.chartSection
+	margin: auto
+	width: 100%
+	// max-width: 500px
+	margin-bottom: 100px
+	.H4
+		font-weight: $regular
+.carouselHeader
+	margin: 100px 0 20px
+	color: $gray
+#signUpBtn
+	position: absolute
+	width: 100px
+	height: 50px
+	top: 0
+	left: 0
+	background: #ccc
+	display: none
+main
+	padding-top: 170px
+	.container
+		>.Button:last-of-type
+			margin: 20px auto
+			display: block
+		// >.H2
+		// 	margin-bottom: 20px
+		>.H3:not(.carouselHeader)
+			margin: 30px 0 20px
+			color: $gray
+		// >.H4
+		// 	margin-bottom: 20px
+		// >p
+		// 	margin-bottom: 20px
+		>.H2:first-of-type
+			text-align: left
+			max-width: 700px
+			margin: 50px auto 0
+			font-weight: $regular
+			color: $gray
+			// font-size: 1.2em
+		.H2
+			color: $blue
+			font-weight: 400
+		>.H3:first-of-type
+			color: $blue
+			// background: rgba(238, 238, 238, 0.5)
+			width: 260px
+			line-height: 30px
+			border-right: 3px
+			margin: auto
+			font-weight: $bold
+			// box-shadow: inset 0px 0px 15px rgba(255,255,255,0.1), 0 3px 10px rgba(0,0,0,0.1)
+			transform: translate(250px, -5px)
+			font-size: 14px
+		section
+			>.H4
+				// margin-bottom: 20px
+				margin-top: 10px
+		form
+			// background: #ccc
+			max-width: 700px
+			width: 100%
+			height: 100px
+			margin: auto
+			padding-top: 35px
+			margin-bottom: 100px
+			section
+				position: relative
+				// background: #c14
+				width: 45%
+				float: left
+				.Button
+					position: absolute
+					top: -15px
+					left: 5px
+					min-width: 100px
+					z-index: 1
+					padding-left: 30px
+					&:hover
+						opacity: 1
+					span
+						pointer-events: none
+						transition: .1s
+						display: block
+					img
+						position: absolute
+						pointer-events: none
+						top: 0
+						transition: .1s
+						left: 0
+						width: 30px
+						height: 30px
+						padding: 5px
+						box-sizing: border-box
+				ul
+					position: absolute
+					min-width: 100px
+					opacity: 0
+					display: none
+					font-size: 14px
+					border-radius: 3px
+					z-index: 1
+					top: 20px
+					left: 5px
+					transition: .3s
+					background: #fff
+					box-shadow: 0px 0px 5px rgba(0,0,0,0.3)
+					li
+						list-style: none
+						line-height: 30px
+						color: $black
+						padding: 0 5px
+						font-family: $sans
+						font-weight: $regular
+						text-align: left
+						cursor: pointer
+						transition: .3s
+						color: $gray
+						position: relative
+						&:hover
+							color: $black
+						&::after
+							content: ''
+							position: absolute
+							left: 0
+							bottom: 0
+							background: $blue
+							width: 100%
+							height: 2px
+							opacity: 0
+							transition: .3s
+						&:hover::after
+							// width: 100%
+							opacity: 0.2
+						// background: #4cc
+						// &:nth-child(odd)
+							// background: #4cf
+				input
+					width: 100%
+					height: 100px
+					line-height: 100px
+					border: 2px dashed $light
+					// border: none
+					background-color: #fff
+					// background-image: url("data:image/svg+xml;utf8,<svg width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill: none; stroke: rgb(204, 204, 204); stroke-width: 4; stroke-dasharray: 5 20'/></svg>")
+					box-sizing: border-box
+					border-radius: 5px
+					padding: 10px
+					// text-shadow: 2px 3px 10px rgba(0, 0, 0, 0.1)
+					// opacity: 0.4
+					// background: #3a3
+					outline: none
+					color: $black
+					font-family: $sans
+					font-weight: $thin
+					font-size: 40px
+					transition: .3s
+					cursor: pointer
+					&::placeholder
+						color: $gray
+					&:focus
+						border: 2px solid $blue
+						// background-image: url("data:image/svg+xml;utf8,<svg width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill: none; stroke: rgb(204, 204, 204); stroke-width: 4; stroke-dasharray: 5 20'/></svg>")
+					&::-webkit-outer-spin-button, &::-webkit-inner-spin-button
+					    -webkit-appearance: none
+					    -moz-appearance: none
+					    appearance: none
+					    margin: 0
+			>.Button
+				width: calc(10% - 20px)
+				line-height: 30px
+				height: 30px
+				min-width: auto
+				font-size: 28px
+				margin: 35px 10px 0
+				float: left
+				// opacity: 0.7
+				border-radius: 3px
+				// background: linear-gradient(45deg, transparent, $blue, transparent)
+				// transform: skew(-10deg, -10deg) scale(0.8)
+				span
+					transition: .7s
+					display: block
+				&:hover
+					// transform: skew(-10deg, -10deg) scale(0.9)
+					// opacity: 1
+					span
+						transform: translateX(10px)
+						text-shadow: 0px 0px 10px $blue
+						// opacity: 0.5
+						
+					// font-size: 2em
+@media (max-width: 910px)
+	main
+		.container
+			>.H3:first-of-type
+				transform: translate(0px, -5px)
+			.H1
+				max-width: 600px
+				width: 100%
+				margin: auto
+@media (max-width: 768px)
+	.chartSection
+		margin-bottom: 50px
+	main
+		padding-top: 150px
+		.container
+			.H1
+				font-size: 40px
+			>.H3:first-of-type
+				transform: translate(0px, -5px)
+			form
+				height: 270px
+				margin-bottom: 60px
+				// background: #ccc
+				section
+					width: 100%
+					float: none
+					input
+						border: 2px dashed #eee
+						// line-height: 70px
+						// height: 70px
+						// font-size: 28px
+				>.Button
+					width: 40px
+					height: 40px
+					margin: 10px auto
+					display: block
+					float: none
+					// border: 2px solid $blue
+					// background: none
+					border-radius: 20px
+					transform: rotate(90deg)
+					span
+						transition: .7s
+						display: block
+						font-size: 21px
+						// color: $blue
+					&:hover
+						// transform: rotate(95deg) skew(-10deg, -10deg) scale(0.9)
+						span
+							transform: translateX(0px)
+							text-shadow: 0px 0px 10px $blue

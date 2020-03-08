@@ -1,0 +1,8 @@
+.container ul {
+  text-align: center; }
+  .container ul a .Image {
+    width: 100px; }
+
+@media (max-width: 768px) {
+  .H2 {
+    margin-bottom: 0 !important; } }

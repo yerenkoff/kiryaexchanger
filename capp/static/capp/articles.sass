@@ -1,0 +1,48 @@
+@import "variables.sass"
+
+main
+	padding: 170px 0 0
+	.container
+		.H2
+			margin-bottom: 0
+			font-weight: $regular
+		section
+			display: table
+			width: 100%
+			.Article
+				float: left
+				margin: 0
+				margin-bottom: 10px
+				&:nth-child(odd)
+					margin-right: 10px
+			.StripeArticle
+				margin-bottom: 10px
+		>.Button
+			display: block
+			margin: 20px auto 0
+			
+@media (min-width: 769px)
+	.Article
+		width: calc(50% - 5px)
+	main
+		.container
+			>.Button
+				&:first-of-type
+					float: right
+					display: block
+					margin: 10px 0
+@media (max-width: 768px)
+	main
+		.container
+			padding-bottom: 10px
+			.H2
+				margin-bottom: 30px
+			section
+				display: block
+				.Article
+					width: 100%
+					height: auto
+					p
+						height: auto
+			>.Button
+				margin: 20px auto 0

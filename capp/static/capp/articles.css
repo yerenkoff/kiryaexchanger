@@ -1,0 +1,42 @@
+main {
+  padding: 170px 0 0; }
+  main .container .H2 {
+    margin-bottom: 0;
+    font-weight: 400; }
+  main .container section {
+    display: table;
+    width: 100%; }
+    main .container section .Article {
+      float: left;
+      margin: 0;
+      margin-bottom: 10px; }
+      main .container section .Article:nth-child(odd) {
+        margin-right: 10px; }
+    main .container section .StripeArticle {
+      margin-bottom: 10px; }
+  main .container > .Button {
+    display: block;
+    margin: 20px auto 0; }
+
+@media (min-width: 769px) {
+  .Article {
+    width: calc(50% - 5px); }
+  main .container > .Button:first-of-type {
+    float: right;
+    display: block;
+    margin: 10px 0; } }
+
+@media (max-width: 768px) {
+  main .container {
+    padding-bottom: 10px; }
+    main .container .H2 {
+      margin-bottom: 30px; }
+    main .container section {
+      display: block; }
+      main .container section .Article {
+        width: 100%;
+        height: auto; }
+        main .container section .Article p {
+          height: auto; }
+    main .container > .Button {
+      margin: 20px auto 0; } }

@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent; }
+
+.nonfield {
+  display: none; }
+
+#loginSection {
+  text-align: center; }
+  #loginSection .Button {
+    display: inline-block; }
+
+form {
+  width: calc(100% - 20px);
+  max-width: 400px;
+  background: #fff;
+  padding: 10px;
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 3px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+  transform: translate(-50%, -80%); }
+  form label {
+    display: none; }
+  form span {
+    display: none; }
+  form h2 {
+    font-family: "Rubik", sans-serif;
+    font-weight: 400;
+    text-align: center;
+    color: #999;
+    font-size: 21px;
+    margin-bottom: 10px; }
+  form input {
+    width: 100%;
+    box-sizing: border-box;
+    outline: none;
+    line-height: 30px;
+    margin-bottom: 10px;
+    padding: 0 5px;
+    border-radius: 3px;
+    border: 1px solid #bbb;
+    color: #222;
+    font-family: "Rubik", sans-serif;
+    font-weight: 400;
+    font-size: 14px; }
+    form input::placeholder {
+      color: #bbb; }
+  form .Button {
+    width: auto;
+    margin: auto;
+    display: block; }
+  form #id_referral {
+    display: none; }
+  form ul li {
+    list-style: none;
+    margin-top: 10px;
+    text-align: center;
+    color: #999;
+    font-family: "Rubik", sans-serif;
+    font-weight: 400;
+    font-size: 14px; }

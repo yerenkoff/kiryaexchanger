@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'capp/signUp.css' %}">
+  <link rel="stylesheet" href="{% static 'capp/variables.css' %}">
+  <link rel="stylesheet" href="{% static 'capp/components.css' %}">
+  <title>Регистрация | Wind</title>
+</head>
+<body>
+  <h1>{{referral}}</h1>
+  <form action="" method="POST">
+    <h2>Регистрация</h2>
+    {% csrf_token %}
+    {{form.as_p}}
+    <input class="Button" type="submit" value="Зарегистрироваться">
+    <ul class="messages">
+          {% for message in messages %}
+          <li {% if message.tags %} class="{{ message.tags }} msg"{% endif %}>{{ message }}</li>
+          {% endfor %}
+    </ul>
+  </form>
+  <script>
+  	var token = '{{ csrf_token }}';
+    window.onload = () => {
+      document.getElementById("id_referral").value = "{{ referral|safe }}";
+    }
+    document.getElementById("id_email").placeholder = "username@email.com";
+    document.getElementById("id_password1").placeholder = "Введите пароль";
+    document.getElementById("id_password2").placeholder = "Введите пароль ещё раз";
+  </script>
+  <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+</body>
+</html>

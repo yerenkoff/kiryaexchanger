@@ -1,0 +1,136 @@
+@import "variables.sass"
+
+.belowPanel
+		section
+			a
+				&:last-child
+					display: inline-block !important
+main
+	padding: 120px 0 20px
+	.container
+		.AccountData
+			padding: 10px 0
+			box-sizing: border-box
+			.H2
+				font-weight: $regular
+				margin-bottom: 10px
+				text-align: left
+			.H3
+				text-align: left
+				font-weight: $regular
+				line-height: 30px
+			.H4
+				text-align: left
+				font-weight: $regular
+				line-height: 30px
+			.walletH4
+				color: $blue
+			h4
+				color: $black
+				font-family: $sans
+				font-size: 16px
+				text-align: left
+				font-weight: $regular
+				line-height: 30px
+				span
+					color: $blue
+			.Button
+				margin-top: 10px
+				margin-bottom: 50px
+				width: 100%
+			a
+				color: $blue
+				font-family: $sans
+				font-weight: $regular
+				text-align: left
+				font-size: 16px
+				transition: .3s
+				line-height: 30px
+				&:hover
+					filter: brightness(0.8)
+			section
+				&:last-child
+					h4
+						color: $gray
+					.H4
+						color: $gray
+		.AccountTable
+			border-radius: 3px
+			box-shadow: 0px 0px 15px rgba(0,0,0,0.2)
+			float: left
+			margin: 20px 0 20px 0
+			padding: 10px
+			box-sizing: border-box
+			section
+				margin-bottom: 30px
+				padding-bottom: 10px
+				border-bottom: 1px solid #ddd
+				.H2
+					float: left
+					font-weight: $regular
+					padding: 0 10px 0 0
+				.Button
+					margin-right: 5px
+			table
+				width: 100%
+				color: $gray
+				font-family: $sans
+				font-weight: $regular
+				text-align: center
+				font-size: 16px
+				line-height: 30px
+				th
+					font-weight: $regular
+					color: $black
+				td
+				    border-bottom: 1px solid #ddd
+			>.Button
+				display: block
+				margin: 30px auto 0
+
+@media (min-width: 911px)
+	.AccountData
+		float: left
+		width: 25%
+		margin: 20px 20px 20px 0
+	.AccountTable
+		width: calc(75% - 20px)
+
+@media (max-width: 910px) and (min-width: 769px)
+	.AccountData
+		float: none
+		width: 100%
+		margin: 20px auto
+		section:first-child
+			width: 40%
+			float: left
+			margin-right: 10px
+			.H2
+				text-align: left
+			.Button
+				width: auto
+				margin-bottom: 20px
+		section:last-child
+			float: right
+			width: calc(60% - 10px)
+			padding-top: 43px
+	.AccountTable
+		width: 100%
+
+@media (max-width: 768px)
+	.AccountData
+		max-width: 400px
+		width: 100%
+		margin: auto
+		section:first-child
+			.Button
+				margin-bottom: 30px
+		.H2:first-child
+			text-align: center !important
+	.AccountTable
+		width: 100%
+		section
+			text-align: center
+			.H2
+				width: 100%
+				margin-bottom: 10px

@@ -1,0 +1,28 @@
+main {
+  padding: 170px 0 0; }
+  main .container .H2 {
+    margin-bottom: 50px;
+    font-weight: 400; }
+  main .container section {
+    display: table; }
+    main .container section .Review {
+      float: left;
+      margin: 0;
+      margin-bottom: 10px;
+      height: 280px; }
+      main .container section .Review:nth-child(odd) {
+        margin-right: 10px; }
+  main .container > .Button {
+    display: block;
+    margin: 20px auto 0; }
+
+@media (min-width: 769px) {
+  .Review {
+    width: calc(50% - 5px); } }
+
+@media (max-width: 768px) {
+  main .container section .Review {
+    width: 100%;
+    height: auto; }
+    main .container section .Review p {
+      height: auto; } }

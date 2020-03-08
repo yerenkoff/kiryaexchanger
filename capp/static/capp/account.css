@@ -1,0 +1,128 @@
+.belowPanel section a:last-child {
+  display: inline-block !important; }
+
+main {
+  padding: 120px 0 20px; }
+  main .container .AccountData {
+    padding: 10px 0;
+    box-sizing: border-box; }
+    main .container .AccountData .H2 {
+      font-weight: 400;
+      margin-bottom: 10px;
+      text-align: left; }
+    main .container .AccountData .H3 {
+      text-align: left;
+      font-weight: 400;
+      line-height: 30px; }
+    main .container .AccountData .H4 {
+      text-align: left;
+      font-weight: 400;
+      line-height: 30px; }
+    main .container .AccountData .walletH4 {
+      color: #7986CB; }
+    main .container .AccountData h4 {
+      color: #222;
+      font-family: "Rubik", sans-serif;
+      font-size: 16px;
+      text-align: left;
+      font-weight: 400;
+      line-height: 30px; }
+      main .container .AccountData h4 span {
+        color: #7986CB; }
+    main .container .AccountData .Button {
+      margin-top: 10px;
+      margin-bottom: 50px;
+      width: 100%; }
+    main .container .AccountData a {
+      color: #7986CB;
+      font-family: "Rubik", sans-serif;
+      font-weight: 400;
+      text-align: left;
+      font-size: 16px;
+      transition: .3s;
+      line-height: 30px; }
+      main .container .AccountData a:hover {
+        filter: brightness(0.8); }
+    main .container .AccountData section:last-child h4 {
+      color: #999; }
+    main .container .AccountData section:last-child .H4 {
+      color: #999; }
+  main .container .AccountTable {
+    border-radius: 3px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    float: left;
+    margin: 20px 0 20px 0;
+    padding: 10px;
+    box-sizing: border-box; }
+    main .container .AccountTable section {
+      margin-bottom: 30px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #ddd; }
+      main .container .AccountTable section .H2 {
+        float: left;
+        font-weight: 400;
+        padding: 0 10px 0 0; }
+      main .container .AccountTable section .Button {
+        margin-right: 5px; }
+    main .container .AccountTable table {
+      width: 100%;
+      color: #999;
+      font-family: "Rubik", sans-serif;
+      font-weight: 400;
+      text-align: center;
+      font-size: 16px;
+      line-height: 30px; }
+      main .container .AccountTable table th {
+        font-weight: 400;
+        color: #222; }
+      main .container .AccountTable table td {
+        border-bottom: 1px solid #ddd; }
+    main .container .AccountTable > .Button {
+      display: block;
+      margin: 30px auto 0; }
+
+@media (min-width: 911px) {
+  .AccountData {
+    float: left;
+    width: 25%;
+    margin: 20px 20px 20px 0; }
+  .AccountTable {
+    width: calc(75% - 20px); } }
+
+@media (max-width: 910px) and (min-width: 769px) {
+  .AccountData {
+    float: none;
+    width: 100%;
+    margin: 20px auto; }
+    .AccountData section:first-child {
+      width: 40%;
+      float: left;
+      margin-right: 10px; }
+      .AccountData section:first-child .H2 {
+        text-align: left; }
+      .AccountData section:first-child .Button {
+        width: auto;
+        margin-bottom: 20px; }
+    .AccountData section:last-child {
+      float: right;
+      width: calc(60% - 10px);
+      padding-top: 43px; }
+  .AccountTable {
+    width: 100%; } }
+
+@media (max-width: 768px) {
+  .AccountData {
+    max-width: 400px;
+    width: 100%;
+    margin: auto; }
+    .AccountData section:first-child .Button {
+      margin-bottom: 30px; }
+    .AccountData .H2:first-child {
+      text-align: center !important; }
+  .AccountTable {
+    width: 100%; }
+    .AccountTable section {
+      text-align: center; }
+      .AccountTable section .H2 {
+        width: 100%;
+        margin-bottom: 10px; } }

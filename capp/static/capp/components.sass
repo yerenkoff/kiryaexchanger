@@ -1,0 +1,689 @@
+@import "variables.sass"
+
+*
+	margin: 0
+	padding: 0
+	-webkit-tap-highlight-color: transparent
+html
+	scroll-behavior: smooth
+#root
+	overflow-x: hidden
+.container
+	max-width: 1000px
+	margin: auto
+	overflow: hidden
+	padding: 0 10px
+.Image
+	// background: #c14
+.hoverableImage
+	transition: .3s
+	filter: brightness(1) drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.1))
+	&:hover
+		filter: brightness(0.8) drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.1))
+.H1
+	color: $light
+	font-family: $sans
+	font-weight: $bold
+	text-align: center
+	font-size: 56px
+.H2
+	color: $gray
+	font-family: $sans
+	font-weight: $bold
+	text-align: center
+	font-size: 28px
+.H3
+	font-family: $sans
+	font-weight: $regular
+	text-align: center
+	font-size: 21px
+	clear: both
+.H3:not(.carouselHeader)
+	color: $black
+.H4
+	color: $black
+	font-family: $sans
+	font-weight: $bold
+	text-align: center
+	font-size: 16px
+p
+	color: $black
+	font-family: $sans
+	font-weight: $regular
+	text-align: left
+	font-size: 14px
+a
+	text-decoration: none
+	color: $black
+	font-family: $sans
+	font-weight: $regular
+	font-size: 14px
+	outline: none
+.Button
+	color: #fff
+	font-family: $sans
+	font-weight: $regular
+	height: 30px
+	outline: none
+	min-width: 70px
+	background: $blue
+	border: none
+	box-shadow: inset 0 2px 5px rgba(255, 255, 255, 0.4), 0px 2px 2px rgba(0,0,0,0.1)
+	color: #fff
+	cursor: pointer
+	border-radius: 3px
+	font-size: 14px
+	transition: 0.3s
+	padding: 0 5px
+	&:hover
+		box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05)
+nav
+	text-align: center
+	width: calc((100% * 100 / 80) * 60 / 100)
+	// background: #ddd
+	float: left
+	line-height: 50px
+	height: 50px
+	a
+		margin: 0 5px
+		color: $gray
+		transition: .3s
+		position: relative
+		&:hover
+			color: $black
+		&::after
+			content: ''
+			position: absolute
+			left: 0
+			bottom: -6px
+			background: $blue
+			width: 100%
+			height: 2px
+			opacity: 0
+			transition: .3s
+		&:hover::after
+			// width: 100%
+			opacity: 0.5
+.ReviewForm
+	padding: 10px
+	box-sizing: border-box
+	max-width: 700px
+	margin: 60px auto 20px
+	width: 100%
+	border-radius: 3px
+	box-shadow: 0px 0px 15px rgba(0,0,0,0.2)
+	.H3
+		margin-bottom: 10px
+		color: $gray
+	.H4
+		text-align: left
+		margin-bottom: 10px
+		font-weight: $regular
+		font-size: 14px
+	textarea
+		resize: none
+		width: 100%
+		border: 1px solid $light
+		margin-bottom: 10px
+		outline: none
+		padding: 10px
+		box-sizing: border-box
+		border-radius: 3px
+		color: $black
+		font-family: $sans
+		font-weight: $regular
+		text-align: left
+		font-size: 14px
+	label
+		color: $black
+		font-family: $sans
+		font-weight: $regular
+		text-align: left
+		font-size: 14px
+.RegisterForm
+	width: 100%
+	max-width: 500px
+	padding: 10px
+	position: absolute
+	top: 50%
+	left: 50%
+	transform: translate(50%, 50%)
+	box-sizing: border-box
+	border-radius: 3px
+	box-shadow: 0px 0px 15px rgba(0,0,0,0.2)
+	.H3
+		color: $gray
+		margin-bottom: 10px
+		font-weight: $regular
+	.TextField
+		display: block
+		padding: 0 5px
+		border: 1px solid $light
+		margin-bottom: 10px
+	label
+		display: block
+		margin-bottom: 10px
+	.Button
+		display: block
+		margin: auto
+
+.Carousel
+	// background: #eee
+	overflow: hidden
+	// width: 1000px
+	margin: auto
+	>*
+		// background: #ccc
+		float: left
+		&:nth-child(2)
+			width: calc(100% - 100px)
+			// background: #4cc
+			padding: 10px 5px
+			box-sizing: border-box
+			overflow-x: hidden
+			overflow-y: hidden
+			white-space: nowrap
+			height: 300px
+			transition: .3s
+			-ms-overflow-style: none
+			&::-webkit-scrollbar
+				display: none
+			.Review
+				// width: calc((100% - 30px) / 3)
+				display: inline-block
+				height: 100%
+		&:first-child
+			opacity: 0.5
+			transition: .3s
+			cursor: pointer
+			width: 50px
+			// background: #c14
+			height: 300px
+			position: relative
+			&:hover
+				opacity: 1
+			img
+				width: 50px
+				opacity: 0.5
+				position: absolute
+				height: 15px
+				top: 50%
+		&:last-child
+			opacity: 0.5
+			transition: .3s
+			cursor: pointer
+			width: 50px
+			// background: #c14
+			height: 300px
+			position: relative
+			&:hover
+				opacity: 1
+			img
+				width: 50px
+				opacity: 0.5
+				position: absolute
+				height: 15px
+				top: 50%
+				transform: rotate(180deg)
+.Review
+	background: #fff
+	transition: .3s
+	// width: 100%
+	margin: 0 5px
+	box-shadow: 0px 0px 15px rgba(0,0,0,0.2)
+	// float: left
+	white-space: normal
+	height: 300px
+	padding: 10px
+	box-sizing: border-box
+	overflow: hidden
+	border-radius: 3px
+	p
+		height: 200px
+		display: -webkit-box
+		overflow : hidden
+		-webkit-line-clamp: 8
+		-webkit-box-orient: vertical
+		line-height: 25px
+		color: $black
+	.details
+		overflow: hidden
+		aside
+			width: 59%
+			float: left
+			.H4
+				line-height: 20px
+				text-align: left
+				&:first-child
+					margin-top: 20px
+					color: $black
+					font-weight: $regular
+				&:last-child
+					color: $gray
+					font-size: 14px
+					font-weight: $regular
+		.H3
+			line-height: 60px
+			color: $blue
+			text-align: right
+			clear: none
+.Article
+	background: #fff
+	// transition: .3s
+	// width: 100%
+	margin: 0 5px
+	box-shadow: 0px 0px 15px rgba(0,0,0,0.2)
+	// float: left
+	white-space: normal
+	height: 400px
+	padding: 10px
+	box-sizing: border-box
+	overflow: hidden
+	border-radius: 3px
+	.H3
+		line-height: 30px
+		text-align: left
+		font-weight: $regular
+		white-space: nowrap
+		text-overflow: ellipsis
+		width: 100%
+		overflow: hidden
+	.H4
+		line-height: 20px
+		text-align: left
+		color: $gray
+		font-size: 14px
+		font-weight: $regular
+	.Image
+		width: 100%
+		display: block
+		background: $light
+		height: 180px
+		border-radius: 3px
+		margin-bottom: 10px
+	p
+		height: 100px
+		display: -webkit-box
+		overflow : hidden
+		-webkit-line-clamp: 4
+		-webkit-box-orient: vertical
+		line-height: 25px
+		color: $black
+	.Button
+		display: block
+		margin: 10px auto 0
+.StripeArticle
+	background: #fff
+	// transition: .3s
+	// width: 100%
+	margin: 0 5px
+	box-shadow: 0px 0px 15px rgba(0,0,0,0.2)
+	// float: left
+	white-space: normal
+	height: 400px
+	padding: 10px
+	box-sizing: border-box
+	overflow: hidden
+	border-radius: 3px
+	height: 210px
+	width: 100%
+	.H3
+		line-height: 30px
+		text-align: left
+		font-weight: $regular
+		white-space: nowrap
+		text-overflow: ellipsis
+		width: 100%
+		overflow: hidden
+		float: right
+		width: calc(70% - 10px)
+	.H4
+		line-height: 20px
+		text-align: left
+		color: $gray
+		font-size: 14px
+		font-weight: $regular
+		float: right
+		width: calc(70% - 10px)
+	.Image
+		width: 100%
+		display: block
+		background: $light
+		height: 180px
+		border-radius: 3px
+		margin-bottom: 10px
+		float: left
+		width: 30%
+		margin-right: 10px
+		height: 100%
+		transform: translateY(-30px)
+	p
+		height: 100px
+		display: -webkit-box
+		overflow : hidden
+		-webkit-line-clamp: 4
+		-webkit-box-orient: vertical
+		line-height: 25px
+		color: $black
+		width: calc(70% - 10px)
+		float: right
+	a
+		float: right
+		width: calc(70% - 10px)
+		.Button
+			display: block
+			margin: 10px auto 0
+.logo-container
+	// background: #ccc
+	// padding-right: 50px
+	height: $headerHeight
+	width: 20%
+	display: block
+	float: left
+	.Image
+		height: $headerHeight
+		width: 60px
+		margin-right: 10px
+		display: block
+		float: left
+	.H2
+		line-height: $headerHeight
+		text-align: center
+		float: left
+		font-weight: $thin
+		font-size: 40px
+		color: $blue
+		// font-size: 2em
+.phoneHeader
+	padding: 0 10px 0 0
+	font-size: 14px
+	color: $gray
+	font-weight: $regular
+	line-height: 50px
+	text-align: right
+header
+	// background: #eee
+	overflow: hidden
+	padding: 10px 0
+	position: fixed
+	background: #fff
+	width: 100%
+	z-index: 9
+	box-shadow: 0px 0px 15px rgba(0,0,0,0.1)
+	.container
+		.abovePanel
+			// background: #aaa
+			float: right
+			text-align: right
+			>*
+				display: block
+				float: left
+			.phoneIcon
+				width: 30px
+			.Image:not(.phoneIcon)
+				height: 50px
+				width: 50px
+				display: block
+			.Button
+				margin-top: 10px
+			a
+				.Image
+					margin: 0 5px
+					&:last-child
+						margin-right: 0
+		.belowPanel
+			width: 80%
+			overflow: hidden
+			// background: #ef4
+			height: 50px
+			section
+				width: calc((100% * 100 / 80) * 20 / 100)
+				// background: #ccc
+				float: left
+				text-align: right
+				margin-top: 10px
+				white-space: nowrap
+				a:last-child
+					.Button
+						margin-left: 10px
+footer
+	padding: 0 0 30px
+	margin-top: 50px
+	box-shadow: 0px 0px 15px rgba(0,0,0,0.1)
+	.phoneHeader
+		padding: 0
+	.container
+		.logo-container
+			margin-top: 40px
+			width: 25%
+		div
+			width: 50%
+			float: left
+			nav
+				width: 100%
+			p
+				float: left
+				box-sizing: border-box
+				// padding: 10px
+				font-size: 14px
+				color: $gray
+				max-height: 100px
+				overflow-x: hidden
+				overflow-y: scroll
+				-ms-overflow-style: none
+				// margin: 20px auto
+				&::-webkit-scrollbar
+					display: none
+		aside
+			width: 25%
+			float: left
+			>a
+				margin-bottom: 20px
+			a
+				display: block
+				float: right
+				.Image
+					height: 50px
+					width: 50px
+					display: block
+			section
+				text-align: right
+				white-space: nowrap
+				clear: both
+				.Button
+					margin-left: 10px
+
+@media (min-width: 911px)
+	.Carousel
+		>*
+			&:nth-child(2)
+				.Review
+					width: calc((100% - 30px) / 3)
+
+@media (max-width: 910px) and (min-width: 769px)
+	footer
+		.container
+			.logo-container
+				width: 25% !important
+				margin: 10px auto
+				display: block
+			div
+				p
+					margin: 20px auto
+					padding: 10px
+
+@media (max-width: 910px)
+	.logo-container
+		height: 50px !important
+		width: auto !important
+		margin-bottom: 10px
+		.Image
+			height: 50px !important
+			width: 50px !important
+		.H2
+			line-height: 50px !important
+	.belowPanel
+		width: 100% !important
+		nav
+			width: auto !important
+		section
+			width: auto !important
+			float: right !important
+	.Carousel
+		>*
+			&:nth-child(2)
+				>*
+					width: calc((100% - 20px) / 2)
+					// box-shadow: 0px 0px 5px rgba(0,0,0,0.5)
+					box-shadow: none
+					// border: 1px solid $light
+	footer
+		.container
+			div
+				width: 100%
+				float: none
+				nav
+					width: 75%
+					margin-top: 10px
+					text-align: right
+					float: right
+				p
+					padding: 0
+			aside
+				width: 100%
+				.H2
+					width: 35%
+					text-align: left
+					float: left
+				>a
+					width: 10%
+					float: left
+					.Image
+						width: 100%
+				section
+					clear: none
+					margin-top: 10px
+					float: right
+
+@media (max-width: 768px)
+	.Carousel
+		>*
+			&:nth-child(2)
+				>*
+					width: calc(100% - 10px)
+					// box-shadow: 0px 0px 5px rgba(0,0,0,0.5)
+					box-shadow: none
+	header
+		padding: 0
+	.logo-container
+		width: 150px !important
+		float: none !important
+		margin: 10px auto 0
+		// margin-bottom: 10px
+		.Image
+			margin-right: 0
+	.abovePanel
+		display: none
+	.belowPanel
+		position: relative
+		nav
+			width: calc(100% - 80px) !important
+			white-space: nowrap
+			overflow-x: scroll
+			overflow-y: hidden
+			
+			position: relative
+			border-radius: 3px
+			// box-shadow: 0px 0px 5px rgba(0,0,0,0.3)
+			-ms-overflow-style: none
+			&::-webkit-scrollbar
+				display: none
+		&::after
+			width: 20%
+			height: 30px
+			position: absolute
+			pointer-events: none
+			top: 10px
+			right: 80px
+			background: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,0.05))
+			content: ''
+			border-radius: 0 5px 5px 0
+		&::before
+			border-radius: 5px 0 0 5px
+			width: 20%
+			height: 30px
+			position: absolute
+			pointer-events: none
+			top: 10px
+			left: 0
+			background: linear-gradient(to left, rgba(0,0,0,0), rgba(0,0,0,0.05))
+			content: ''
+			z-index: 1
+		section
+			text-align: right !important
+			width: auto !important
+			// background: #ccc
+			a
+				&:last-child
+					display: none
+				.Button
+					margin-left: 0px !important
+	footer
+		.container
+			.logo-container
+				margin-top: 10px
+			div
+				position: relative
+				nav
+					width: 100% !important
+					white-space: nowrap
+					overflow-x: scroll
+					overflow-y: hidden
+					position: relative
+					border-radius: 3px
+					text-align: center
+					margin-top: 0
+					-ms-overflow-style: none
+					&::-webkit-scrollbar
+						display: none
+				&::after
+					width: 20%
+					height: 30px
+					position: absolute
+					pointer-events: none
+					top: 10px
+					right: 0px
+					background: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,0.05))
+					content: ''
+					border-radius: 0 5px 5px 0
+				&::before
+					border-radius: 5px 0 0 5px
+					width: 20%
+					height: 30px
+					position: absolute
+					pointer-events: none
+					top: 10px
+					left: 0
+					background: linear-gradient(to left, rgba(0,0,0,0), rgba(0,0,0,0.05))
+					content: ''
+					z-index: 1
+				p
+					margin-top: 10px
+			aside
+				// background: #ccc
+				width: 100%
+				overflow: hidden
+				margin-top: 10px
+				text-align: center
+				.H2
+					text-align: center
+					display: none
+				a
+					display: inline
+					float: none
+					.Image
+						display: inline
+						width: auto
+				section
+					text-align: center
+					display: none

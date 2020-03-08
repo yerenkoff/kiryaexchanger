@@ -1,0 +1,7 @@
+main .container .H2 {
+  margin-bottom: 50px !important; }
+
+main .container section .Article {
+  height: auto; }
+  main .container section .Article .H3 {
+    white-space: normal; }

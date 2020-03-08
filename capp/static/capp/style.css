@@ -1,0 +1,205 @@
+.chart-container {
+  height: 300px; }
+
+.chartSection {
+  margin: auto;
+  width: 100%;
+  margin-bottom: 100px; }
+  .chartSection .H4 {
+    font-weight: 400; }
+
+.carouselHeader {
+  margin: 100px 0 20px;
+  color: #999; }
+
+#signUpBtn {
+  position: absolute;
+  width: 100px;
+  height: 50px;
+  top: 0;
+  left: 0;
+  background: #ccc;
+  display: none; }
+
+main {
+  padding-top: 170px; }
+  main .container > .Button:last-of-type {
+    margin: 20px auto;
+    display: block; }
+  main .container > .H3:not(.carouselHeader) {
+    margin: 30px 0 20px;
+    color: #999; }
+  main .container > .H2:first-of-type {
+    text-align: left;
+    max-width: 700px;
+    margin: 50px auto 0;
+    font-weight: 400;
+    color: #999; }
+  main .container .H2 {
+    color: #7986CB;
+    font-weight: 400; }
+  main .container > .H3:first-of-type {
+    color: #7986CB;
+    width: 260px;
+    line-height: 30px;
+    border-right: 3px;
+    margin: auto;
+    font-weight: 700;
+    transform: translate(250px, -5px);
+    font-size: 14px; }
+  main .container section > .H4 {
+    margin-top: 10px; }
+  main .container form {
+    max-width: 700px;
+    width: 100%;
+    height: 100px;
+    margin: auto;
+    padding-top: 35px;
+    margin-bottom: 100px; }
+    main .container form section {
+      position: relative;
+      width: 45%;
+      float: left; }
+      main .container form section .Button {
+        position: absolute;
+        top: -15px;
+        left: 5px;
+        min-width: 100px;
+        z-index: 1;
+        padding-left: 30px; }
+        main .container form section .Button:hover {
+          opacity: 1; }
+        main .container form section .Button span {
+          pointer-events: none;
+          transition: .1s;
+          display: block; }
+        main .container form section .Button img {
+          position: absolute;
+          pointer-events: none;
+          top: 0;
+          transition: .1s;
+          left: 0;
+          width: 30px;
+          height: 30px;
+          padding: 5px;
+          box-sizing: border-box; }
+      main .container form section ul {
+        position: absolute;
+        min-width: 100px;
+        opacity: 0;
+        display: none;
+        font-size: 14px;
+        border-radius: 3px;
+        z-index: 1;
+        top: 20px;
+        left: 5px;
+        transition: .3s;
+        background: #fff;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3); }
+        main .container form section ul li {
+          list-style: none;
+          line-height: 30px;
+          color: #222;
+          padding: 0 5px;
+          font-family: "Rubik", sans-serif;
+          font-weight: 400;
+          text-align: left;
+          cursor: pointer;
+          transition: .3s;
+          color: #999;
+          position: relative; }
+          main .container form section ul li:hover {
+            color: #222; }
+          main .container form section ul li::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            background: #7986CB;
+            width: 100%;
+            height: 2px;
+            opacity: 0;
+            transition: .3s; }
+          main .container form section ul li:hover::after {
+            opacity: 0.2; }
+      main .container form section input {
+        width: 100%;
+        height: 100px;
+        line-height: 100px;
+        border: 2px dashed #bbb;
+        background-color: #fff;
+        box-sizing: border-box;
+        border-radius: 5px;
+        padding: 10px;
+        outline: none;
+        color: #222;
+        font-family: "Rubik", sans-serif;
+        font-weight: 300;
+        font-size: 40px;
+        transition: .3s;
+        cursor: pointer; }
+        main .container form section input::placeholder {
+          color: #999; }
+        main .container form section input:focus {
+          border: 2px solid #7986CB; }
+        main .container form section input::-webkit-outer-spin-button, main .container form section input::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+          margin: 0; }
+    main .container form > .Button {
+      width: calc(10% - 20px);
+      line-height: 30px;
+      height: 30px;
+      min-width: auto;
+      font-size: 28px;
+      margin: 35px 10px 0;
+      float: left;
+      border-radius: 3px; }
+      main .container form > .Button span {
+        transition: .7s;
+        display: block; }
+      main .container form > .Button:hover span {
+        transform: translateX(10px);
+        text-shadow: 0px 0px 10px #7986CB; }
+
+@media (max-width: 910px) {
+  main .container > .H3:first-of-type {
+    transform: translate(0px, -5px); }
+  main .container .H1 {
+    max-width: 600px;
+    width: 100%;
+    margin: auto; } }
+
+@media (max-width: 768px) {
+  .chartSection {
+    margin-bottom: 50px; }
+  main {
+    padding-top: 150px; }
+    main .container .H1 {
+      font-size: 40px; }
+    main .container > .H3:first-of-type {
+      transform: translate(0px, -5px); }
+    main .container form {
+      height: 270px;
+      margin-bottom: 60px; }
+      main .container form section {
+        width: 100%;
+        float: none; }
+        main .container form section input {
+          border: 2px dashed #eee; }
+      main .container form > .Button {
+        width: 40px;
+        height: 40px;
+        margin: 10px auto;
+        display: block;
+        float: none;
+        border-radius: 20px;
+        transform: rotate(90deg); }
+        main .container form > .Button span {
+          transition: .7s;
+          display: block;
+          font-size: 21px; }
+        main .container form > .Button:hover span {
+          transform: translateX(0px);
+          text-shadow: 0px 0px 10px #7986CB; } }
