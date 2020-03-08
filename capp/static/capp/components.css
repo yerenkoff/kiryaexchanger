@@ -250,7 +250,7 @@ nav {
   .Review .details {
     overflow: hidden; }
     .Review .details aside {
-      width: 59%;
+      width: 50%;
       float: left; }
       .Review .details aside .H4 {
         line-height: 20px;
@@ -267,7 +267,9 @@ nav {
       line-height: 60px;
       color: #7986CB;
       text-align: right;
-      clear: none; }
+      clear: none;
+      width: 50%;
+      float: right; }
 
 .Article {
   background: #fff;
